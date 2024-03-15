@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    font-family: "Arial", sans-serif;
+    height: 48.5rem; 
+    background-color: #f0f0f0; 
+}
+
+
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFC0CB; 
+    padding: 10px;
+    align-items: center;
+    width: 80px; 
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2); 
+    overflow-y: auto; 
+}
+
+.toolbar button {
+    margin: 10px 0;
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+
+    cursor: pointer;
+    padding: 5px; 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar button.selected, .toolbar button:hover {
+    background-color: #FF0000; 
+    color: white; 
+    border-color: #FF0000; 
+}
+
+.toolbar button img {
+    width: 24px; 
+
+    height: auto;
+
+}
+
+#my_canv {
+
+    border: 3px solid #000000; 
+    
+    flex-grow: 1;
+    max-width: calc(100% - 80px); 
+
+    background-color: white; 
+}
+
+#img-data-div {
+    display: none; 
+}

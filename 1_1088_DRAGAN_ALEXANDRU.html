@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dragan's Canvas</title>
+    <link rel="stylesheet" type="text/css" href="1_1088_DRAGAN_ALEXANDRU.css">
+    <script src="1_1088_DRAGAN_ALEXANDRU.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <label for="Brush">Brush</label>
+
+            <button id="brush" onclick="ChangeTool('brush')"><img src="media/brush_icon.png" alt="Brush"></button>
+            <label for="line">Linie</label>
+            
+            <button id="line" onclick="ChangeTool('line')"><img src="media/line_icon.png" alt="Line"></button>
+            <label for="rectangle">Dreptunghi</label>
+            <button id="rectangle" onclick="ChangeTool('rectangle')"><img src="media/rectangle_icon.png" alt="Rectangle"></button>
+            <label for="circle">Cerc</label>
+
+            <button id="circle" onclick="ChangeTool('circle')"><img src="media/circle_icon.png" alt="Circle"></button>
+            <label for="polygon">Polygon</label>
+
+            <button id="polygon" onclick="ChangeTool('polygon')"><img src="media/polygon_icon.png" alt="Polygon"></button>
+            <label for="ellipse">Elipsa</label>
+
+            <button id="ellipse" onclick="ChangeTool('ellipse')"><img src="media/ellipse_icon.png" alt="Ellipse"></button>
+            <label for="delete">Delete</label>
+
+            <button id="delete" onclick="ChangeTool('delete')"><img src="media/delete_icon.png" alt="Delete"></button>
+            <label for="colorPicker">Paint Color</label>
+            <input type="color" id="colorPicker" value="#000000">
+            <label for="lineWidthPicker">Width</label>
+            <input type="range" id="lineWidthPicker" min="1" max="10" value="2">
+            <label for="bgColorPicker">Background color</label>
+            <input type="color" id="bgColorPicker" value="#FFFFFF">
+            <select id="download-format">
+                <option value="png">PNG</option>
+                <option value="svg">SVG</option>
+            </select>
+            <button onclick="downloadImage()">Export</button>
+        </div>
+        <br>
+        <canvas id="my_canv" width="1200" height="1200"></canvas>
+        <div id="shape-list"></div>
+    </div>
+</body>
+</html>
